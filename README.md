@@ -1,1 +1,1 @@
-#It's my blog,to learn python Django.
+#It's my blog,to learn python.

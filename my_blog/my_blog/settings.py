@@ -1,3 +1,4 @@
+#coding: utf-8
 """
 Django settings for my_blog project.
 
@@ -31,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = (
+    'bootstrap_admin', #放在'django.contrib.admin'前面
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -101,3 +103,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+
+TEMPLATES_DIRS = (
+    os.path.join(BASE_DIR,'templates').replace('\\','/'),
+    )
+
+TEMPLATE_PATH = os.path.join(BASE_DIR,'templates')
+TEMPLATE_DIRS = (
+    TEMPLATE_PATH,
+    )
